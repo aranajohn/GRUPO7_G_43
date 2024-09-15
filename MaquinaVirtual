@@ -1,0 +1,18 @@
+sudo yum install git
+sudo yum install java-11-openjdk-devel
+	
+sudo yum-config-manager --add-repo http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo
+sudo yum-config-manager --enable epel-apache-maven
+sudo yum install -y apache-maven
+sudo alternatives --config java
+sudo alternatives --config javac
+	
+git clone  "Ruta clone de Github"
+	
+entrar a la carpeta
+mvn clean package -DskipTests
+
+entrar a la carpeta target
+sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+sudo firewall-cmd --reload
+java -jar llave-0.0.1-SNAPSHOT.jar
